@@ -7,9 +7,9 @@ export const todoList = atom<Todo[]>({
   default: [],
 });
 
-export const todoSelector = selector({
-  key: 'todoSelector',
+export const todoListSize = selector({
+  key: 'todoListSize',
   get: async ({ get }) => {
-    return get(todoList);
+    return get(todoList).length;
   },
 });
